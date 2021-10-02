@@ -5,7 +5,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register('carros', CarrosViewSet, basename='Carros')
-router.register('marca', MarcaViewSet, basename='Marca')
+router.register('marcas', MarcaViewSet, basename='Marcas')
 
 
 urlpatterns = [
