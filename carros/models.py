@@ -8,8 +8,7 @@ class Marca(models.Model):
     def __str__(self):
         return self.nome
 
-
-class Carro(models.Model):
+class Automovel(models.Model):
     nome = models.CharField(max_length=255, blank=False, null=False)
     km_por_galao = models.FloatField()
     cilindros = models.IntegerField()
@@ -18,7 +17,13 @@ class Carro(models.Model):
     aceleracao = models.FloatField()
     ano = models.DateField()
     origem = models.CharField(max_length=255)
+    marca = models.ForeignKey(Marca, on_delete=models.CASCADE,blank=True, null=True)
 
     def __str__(self):
         return self.nome
+
+
+
+
+
 

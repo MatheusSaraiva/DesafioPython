@@ -20,7 +20,7 @@ schema_view = get_schema_view(
 )
 
 router = routers.DefaultRouter()
-router.register('carros', CarrosViewSet, basename='Carros')
+router.register('carros', CarrosViewSet, basename='Automovel')
 router.register('marcas', MarcaViewSet, basename='Marcas')
 
 
