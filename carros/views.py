@@ -38,9 +38,8 @@ class MarcaViewSet(viewsets.ModelViewSet):
     filterset_fields = ['origem']
 
     def list(self, request):
-        queryset = Automovel.objects.all()
+        queryset = Marca.objects.all()
         queryset = self.filter_queryset(queryset)
-
         serializer = MarcaSerializer(queryset, many=True)
         return Response(serializer.data)
 
